@@ -5,7 +5,11 @@ on:
 #     branches:
 #       - master
   pull_request:
-    type: [opened, synchronize, reopened]
+    # type: [opened, synchronize, reopened]
+    type:
+      - closed
+    branches:
+      - master
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
